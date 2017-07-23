@@ -3,10 +3,11 @@ from centos:centos6
 MAINTAINER Anoop A K <anoop@codecg.com> 
 
 # Install postgresql-libs
-RUN yum install postgresql-libs tar -y
+RUN yum install wget postgresql-libs tar -y
 
 # Copy afanasy RPMs to /tmp
-ADD https://sourceforge.net/projects/cgru/files/2.2.2/cgru.2.2.2.CentOS-6.9_x86_64.tar.gz /tmp/ 
+WORKDIR /tmp
+RUN wget https://sourceforge.net/projects/cgru/files/2.2.2/cgru.2.2.2.CentOS-6.9_x86_64.tar.gz  
 
 # Extract the archive to /tmp
 RUN tar xfv  /tmp/cgru.2.2.2.CentOS-6.9_x86_64.tar.gz -C /tmp/ 
