@@ -6,7 +6,7 @@ MAINTAINER Anoop A K <anoop@codecg.com>
 RUN yum install postgresql-libs tar -y
 
 # Copy afanasy RPMs to /tmp
-ADD http://downloads.sourceforge.net/project/cgru/2.1.0/cgru.2.1.0.CentOS-6.7_x86_64.tar.gz /tmp/ 
+ADD https://sourceforge.net/projects/cgru/files/2.2.2/cgru.2.2.2.CentOS-6.9_x86_64.tar.gz /tmp/ 
 
 # Extract the archive to /tmp
 RUN tar xfv  /tmp/cgru.2.1.0.CentOS-6.7_x86_64.tar.gz -C /tmp/ 
