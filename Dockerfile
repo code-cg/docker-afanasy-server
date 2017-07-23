@@ -9,12 +9,12 @@ RUN yum install postgresql-libs tar -y
 ADD https://sourceforge.net/projects/cgru/files/2.2.2/cgru.2.2.2.CentOS-6.9_x86_64.tar.gz /tmp/ 
 
 # Extract the archive to /tmp
-RUN tar xfv  /tmp/cgru.2.1.0.CentOS-6.7_x86_64.tar.gz -C /tmp/ 
+RUN tar xfv  /tmp/cgru.2.2.2.CentOS-6.9_x86_64.tar.gz -C /tmp/ 
 
 # Install afanasy-server
-RUN rpm -ivh /tmp/cgru-common-2.1.0-0.x86_64.rpm
-RUN rpm -ivh /tmp/afanasy-common-2.1.0-0.x86_64.rpm 
-RUN rpm -ivh /tmp/afanasy-server-2.1.0-0.x86_64.rpm
+RUN rpm -ivh /tmp/cgru-common-2.2.2-0.x86_64.rpm
+RUN rpm -ivh /tmp/afanasy-common-2.2.2-0.x86_64.rpm 
+RUN rpm -ivh /tmp/afanasy-server-2.2.2-0.x86_64.rpm
 
 # Set CGRU environment variables
 ENV PATH /opt/cgru/afanasy/bin:$PATH
